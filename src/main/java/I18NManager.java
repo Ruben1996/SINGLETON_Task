@@ -18,16 +18,15 @@ public class I18NManager {
     public String getText(String language, String Key){
         ResourceBundle rb = data.get(language);
         if (rb == null){
-            rb = ResourceBundle.getBundle("edu.upc.eetac.dsa.patrons.i18n."+language);
+            rb = ResourceBundle.getBundle("properties"+language);
             data.put(language, rb);
 
         }
         return rb.getString(Key);
     }
 
-    public static void main (String[] args){
-        String value = I18NManager.getInstance().getText("ca", "T1");
-        value = I18NManager.getInstance().getText("cas", "T2");
-        value = I18NManager.getInstance().getText("en", "T3");
+    public static void main (String[] args) {
+        String value = I18NManager.getInstance().getText("EN", "T1");
+        System.out.println(value);
     }
 }

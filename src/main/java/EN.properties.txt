@@ -1,0 +1,3 @@
+T1 = Hello
+T2 = Mada faka
+T3 = niggi
