@@ -18,7 +18,7 @@ public class I18NManager {
     public String getText(String language, String Key){
         ResourceBundle rb = data.get(language);
         if (rb == null){
-            rb = ResourceBundle.getBundle("properties"+language);
+            rb = ResourceBundle.getBundle(language);
             data.put(language, rb);
 
         }
